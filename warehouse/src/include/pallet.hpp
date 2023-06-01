@@ -40,4 +40,7 @@ class Pallet
         /// @brief attempts to decrease itemcount of item by 1, if succesful return True, else return False
         /// @return succesfulness of item count decrease
         bool putOne();
+
+    friend bool operator == (const Pallet& lhs, const Pallet& rhs); //Compare lefthand and right hand
+    friend bool operator != (const Pallet& lhs, const Pallet& rhs);
 };

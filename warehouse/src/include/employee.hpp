@@ -5,6 +5,8 @@ class Employee
         bool busy;
         bool forkLiftCertificate;
     public:
+        friend bool operator == (const ) const {}
+        friend bool operator != (const ) const {}
         /// @brief creates the Employee object, fills in busy as false.
         /// @param name name of the employee
         /// @param forkLiftCertificate Optional: true if the employee has a forklift certificate, false if not. If not provided we assume that they do not have a certificate.

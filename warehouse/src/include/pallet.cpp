@@ -43,3 +43,10 @@ bool Pallet::putOne(){
         return false;
     }
 }
+
+bool operator==(const Pallet& lhs, const Pallet& rhs){
+    return lhs.itemName == rhs.itemName;
+}
+bool operator!=(const Pallet& lhs, const Pallet& rhs){
+    return !operator==(lhs,rhs);
+}
