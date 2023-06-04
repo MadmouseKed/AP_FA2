@@ -6,7 +6,7 @@ Employee::Employee(std::string name, bool forkLiftCertificate = false){
     this->forkLiftCertificate = forkLiftCertificate;
     busy = false;
 }
-std::string Employee::getname(){
+std::string Employee::getName(){
     return name;
 }
 bool Employee::getBusy(){
@@ -20,4 +20,11 @@ bool Employee::getForkLiftCertificate(){
 }
 void Employee::setForkLiftCertificate(bool forkLiftCertificate){
     this->forkLiftCertificate = forkLiftCertificate;
+}
+
+bool operator==(const Employee& lhs, const Employee& rhs){
+    return lhs.name == rhs.name;
+}
+bool operator!=(const Employee& lhs, const Employee& rhs){
+    return !operator==(lhs,rhs);
 }

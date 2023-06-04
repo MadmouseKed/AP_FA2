@@ -3,9 +3,16 @@
 
 Shelf::Shelf(){
     
-};
-bool swapPallet(int slot, int slot2){
+}
+bool Shelf::swapPallet(int slot, int slot2){
     Pallet temp = pallets[slot];
     pallets[slot] = pallets[slot2];
     pallets[slot2] = temp;
-};
+    return true;
+}
+bool operator==(const Shelf& lhs, const Shelf& rhs){
+    
+}
+bool operator!=(const Shelf& lhs, const Shelf& rhs){
+
+}
